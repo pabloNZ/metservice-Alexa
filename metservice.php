@@ -20,10 +20,10 @@ $updateTime = $obsRaw->{'threeHour'}->{'dateTime'};
 
 $mainText = (' ' .$forecastData. ' with a high of ' .$maxData. ' degrees and low of ' .$minData. ' degrees. Right now it is ' .$tempNow. ' with ' .$windDir. ' winds of ' .$windNow. ' kilometers per hour which makes it feel like ' .$tempFeels. ' degrees');
 
-$uid = 'urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b';
+$uid = 'uid:000005';
 $updateDate = $timestamp;
 $titleText = 'Metservice Weather';
-$redirectionUrl = 'www.metservice.co.nz';
+$redirectionUrl = 'http://www.metservice.co.nz';
 
 $arr = array('uid'=>$uid, 'updateDate'=>$timestamp, 'titleText'=>$titleText, 'mainText'=>$mainText, 'redirectionUrl'=>$redirectionUrl);
 
