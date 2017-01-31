@@ -26,6 +26,7 @@ $titleText = 'Metservice Weather';
 $redirectionUrl = 'http://www.metservice.co.nz';
 
 $arr = array('uid'=>$uid, 'updateDate'=>$timestamp, 'titleText'=>$titleText, 'mainText'=>$mainText, 'redirectionUrl'=>$redirectionUrl);
+header('Content-type: application/json');
 
 $postResult = json_encode($arr);
 
