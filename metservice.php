@@ -23,7 +23,7 @@ $mainText = (' ' .$forecastData. ' with a high of ' .$maxData. ' degrees and low
 $uid = 'urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b';
 $updateDate = $timestamp;
 $titleText = 'Metservice Weather';
-$redirectionUrl = 'http://www.metservice.co.nz';
+$redirectionUrl = 'www.metservice.co.nz';
 
 $arr = array('uid'=>$uid, 'updateDate'=>$timestamp, 'titleText'=>$titleText, 'mainText'=>$mainText, 'redirectionUrl'=>$redirectionUrl);
 
