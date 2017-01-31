@@ -1,5 +1,5 @@
 <?php
-//Script by Disrespective @ geekzone
+//Script by pabloNZ
 
    header('Content-Type: application/json');
 
