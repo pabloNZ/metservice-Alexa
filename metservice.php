@@ -23,7 +23,7 @@ $mainText = ('The weather today is ' .$forecastData. ' with a high of ' .$maxDat
 $uid = '000005';
 $updateDate = $timestamp;
 $titleText = 'Metservice Weather';
-$redirectionUrl = 'http://www.metservice.co.nz';
+$redirectionUrl = 'http://www.metservice.co.nz/';
 
 $arr = array('uid'=>$uid, 'updateDate'=>$timestamp, 'titleText'=>$titleText, 'mainText'=>$mainText, 'redirectionUrl'=>$redirectionUrl);
 header('Content-Type: application/json');
