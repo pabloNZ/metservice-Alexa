@@ -1,6 +1,8 @@
 # metservice-Alexa
 Use metservice.com data to provide a flash briefing of the weather for the Amazon Echo/Alexa.
 
+...WORK IN PROGRESS...
+
 Steps involved:
 
 1. Register for a free developer account on developer.amazon.com
