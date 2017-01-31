@@ -6,6 +6,9 @@ $obsUrl = file_get_contents('http://www.metservice.com/publicData/localObs_lyall
 $forecastRaw = json_decode($forecastUrl);
 $obsRaw = json_decode($obsUrl);
 
+$timestamp = "20150611183741.941Z";
+$date = DateTime::createFromFormat('YmdHis.ue', $timestamp);
+
 $forecastData = $forecastRaw->{'days'}[0]->{'forecast'};
 $maxData = $forecastRaw->{'days'}[0]->{'max'};
 $minData = $forecastRaw->{'days'}[0]->{'min'};
@@ -16,9 +19,16 @@ $windNow = $obsRaw->{'threeHour'}->{'windSpeed'};
 $tempFeels = $obsRaw->{'threeHour'}->{'windChill'};
 $updateTime = $obsRaw->{'threeHour'}->{'dateTime'};
 
-$result = (' ' .$forecastData. ' with a high of ' .$maxData. ' degrees and low of ' .$minData. ' degrees. Right now it is ' .$tempNow. ' with ' .$windDir. ' winds of ' .$windNow. ' kilometers per hour which makes it feel like ' .$tempFeels. ' degrees');
+$mainText = (' ' .$forecastData. ' with a high of ' .$maxData. ' degrees and low of ' .$minData. ' degrees. Right now it is ' .$tempNow. ' with ' .$windDir. ' winds of ' .$windNow. ' kilometers per hour which makes it feel like ' .$tempFeels. ' degrees');
 
-$postResult = ('Content-Type: application/json {"uid": "urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b","updateDate": "2016-05-23T00:00:00.0Z","titleText": "Metservice Weather","mainText": "' .$result. '","redirectionUrl": "http://www.metservice.co.nz"}');
+$uid = 'urn:uuid:1335c695-cfb8-4ebb-abbd-80da344efa6b';
+$updateDate = $date->format('Y-m-d H:i:s');;
+$titleText = 'Metservice Weather';
+$redirectionUrl = 'http://www.metservice.co.nz';
 
-echo $postResult;
+$arr = array('uid'=>$uid, 'updateDate'=>$date, 'titleText'=>$titleText, 'mainText'=>$mainText, 'redirectionUrl'=>$redirectionUrl);
+
+$postResult = json_encode($arr);
+
+echo ($postResult);
 ?>
