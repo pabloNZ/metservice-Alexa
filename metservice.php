@@ -6,7 +6,7 @@ $obsUrl = file_get_contents('http://www.metservice.com/publicData/localObs_lyall
 $forecastRaw = json_decode($forecastUrl);
 $obsRaw = json_decode($obsUrl);
 
-$timestamp = gmdate("Y-m-d\TH:i:s\Z");
+$timestamp = gmdate("Y-m-d\TH:i:s.0\Z");
 
 $forecastData = $forecastRaw->{'days'}[0]->{'forecast'};
 $maxData = $forecastRaw->{'days'}[0]->{'max'};
@@ -20,7 +20,7 @@ $updateTime = $obsRaw->{'threeHour'}->{'dateTime'};
 
 $mainText = (' ' .$forecastData. ' with a high of ' .$maxData. ' degrees and low of ' .$minData. ' degrees. Right now it is ' .$tempNow. ' with ' .$windDir. ' winds of ' .$windNow. ' kilometers per hour which makes it feel like ' .$tempFeels. ' degrees');
 
-$uid = 'uid:000005';
+$uid = '000005';
 $updateDate = $timestamp;
 $titleText = 'Metservice Weather';
 $redirectionUrl = 'http://www.metservice.co.nz';
