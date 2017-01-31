@@ -1,8 +1,6 @@
 # metservice-Alexa
 Use metservice.com data to provide a flash briefing of the weather for the Amazon Echo/Alexa.
 
-...WORK IN PROGRESS...
-
 Steps involved:
 
 1. Register for a free developer account on developer.amazon.com
@@ -13,3 +11,5 @@ Steps involved:
 6. Click "Yes" for start testing this skill.
 
 Then, go to the alexa app (or alexa.amazon.com) and click skills. In the top right, click "Your skills" and search for the name you entered at step 5. Then go to settings->flash briefing and enable it.
+
+Script made possible thanks to help from MickeyD @geekzone.co.nz
